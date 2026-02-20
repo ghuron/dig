@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLS Logic Harvester</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,6 +26,7 @@
             --accent-blue: #3B82F6;
             --accent-orange: #F15A29;
             --text-white: #ffffff;
+            --white: #ffffff;
             --text-dark: #333333;
             --text-light: #666666;
             --bg-light: #F4F6F8;
@@ -224,137 +225,9 @@
 
         .strategy-card p { color: var(--text-light); font-size: 1rem; line-height: 1.6; }
 
-        /* --- SERVICE / PROCESS SECTION --- */
-        .process-section {
-            background: var(--white);
-            padding: 80px 0;
-            border-top: 1px solid #eee;
-            min-height: 800px;
-        }
-
-        .step-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .step-block {
-            margin-bottom: 40px;
-            padding: 30px;
-            border-radius: 12px;
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            position: relative;
-        }
-
-        .step-block.active {
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-        }
-
-        .step-block.disabled {
-            opacity: 0.5;
-            pointer-events: none;
-            background: #f9f9f9;
-        }
-
-        .step-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .step-number {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-blue);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .step-number.done {
-            background: var(--success-green);
-        }
-
-        .step-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-        }
-
-        /* Forms & Buttons */
-        .dropbox-btn {
-            background-color: #0061FE;
-            color: white;
-            padding: 16px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-align: center;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: background 0.2s;
-            text-decoration: none;
-            width: 100%;
-            justify-content: center;
-        }
-        
-        .dropbox-btn:hover { background-color: #0050d1; }
-
-        .form-group { margin-bottom: 20px; }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: var(--text-dark);
-        }
-
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d0d0d0;
-            border-radius: 6px;
-            font-family: inherit;
-            font-size: 1rem;
-            background: #fff;
-        }
-        
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-blue);
-        }
-        
-        .form-group textarea { resize: vertical; min-height: 120px; }
-
-        .auth-container {
-            display: flex;
-            justify-content: center;
-            padding: 20px 0;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: var(--bg-dark);
-            color: rgba(255,255,255,0.4);
-            text-align: center;
-            padding: 40px 0;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        /* --- DATA PRIVACY SECTION --- */
+        /* --- PRIVACY SECTION --- */
         .privacy-section {
-            background: white;
-            border-top: 1px solid #eee;
+            background-color: var(--bg-light);
         }
 
         .privacy-grid {
@@ -364,34 +237,27 @@
         }
 
         .privacy-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent-blue);
             transition: transform 0.3s ease;
         }
 
-        .privacy-card:hover { transform: translateY(-3px); }
+        .privacy-card:hover { transform: translateY(-5px); }
 
-        .privacy-card .card-icon {
+        .card-icon {
             font-size: 2rem;
-            margin-bottom: 12px;
             display: block;
+            margin-bottom: 20px;
         }
 
         .privacy-card h3 {
             color: var(--primary-blue);
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
             font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .privacy-card p,
-        .privacy-card li {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
         }
 
         .privacy-card ul {
@@ -399,56 +265,175 @@
             padding: 0;
         }
 
-        .privacy-card ul li {
-            padding: 4px 0;
-            padding-left: 20px;
-            position: relative;
+        .privacy-card li {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
         }
 
-        .privacy-card ul li::before {
-            content: "•";
-            color: var(--accent-blue);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
+        .privacy-card b {
+            color: var(--text-dark);
         }
 
         .privacy-card .highlight {
-            color: var(--success-green);
+            color: var(--accent-orange);
             font-weight: 700;
         }
 
-        .consultation-opt-in {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 16px;
-            margin-bottom: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            background: #f9fafb;
+        /* --- EMAIL FORM UX --- */
+        .process-section {
+            background: var(--bg-light);
+            padding: 80px 0;
         }
 
-        .consultation-opt-in input[type="checkbox"] {
-            margin-top: 3px;
+        .email-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .email-row {
+            display: flex;
+            align-items: center;
+            padding: 12px 24px;
+            border-bottom: 1px solid #f0f0f0;
+            min-height: 56px;
+        }
+
+        .email-label {
+            width: 70px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .email-content {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            min-height: 32px;
+        }
+
+        .user-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f0f4f8;
+            padding: 4px 12px 4px 4px;
+            border-radius: 20px;
+            font-weight: 500;
+            color: var(--primary-blue);
+        }
+
+        .user-pill img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .cc-checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .cc-checkbox-label input {
             width: 18px;
             height: 18px;
-            flex-shrink: 0;
             cursor: pointer;
         }
 
-        .consultation-opt-in label {
-            font-size: 0.95rem;
+        .email-body-container {
+            padding: 20px;
+        }
+
+        .email-body-container textarea {
+            width: 100%;
+            min-height: 300px;
+            border: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            resize: vertical;
             color: var(--text-dark);
-            cursor: pointer;
-            line-height: 1.5;
         }
 
-        .consultation-opt-in label small {
-            display: block;
-            color: var(--text-light);
-            font-weight: 400;
-            margin-top: 2px;
+        .email-footer {
+            padding: 20px;
+            background: #fcfcfc;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .attach-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-dark);
+            font-weight: 600;
+            padding: 10px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background: white;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .attach-link:hover {
+            background: #f8f8f8;
+            border-color: #d0d0d0;
+            color: var(--primary-blue);
+        }
+
+        .deletion-notice {
+            color: var(--accent-orange);
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .disabled-overlay {
+            opacity: 0.4;
+            pointer-events: none;
+            filter: grayscale(0.5);
+        }
+
+        #sign-in-container {
+            width: 100%;
+        }
+
+        /* Override Clerk Styles for Email Form */
+        .cl-rootBox { width: 100%; }
+        .cl-signIn-root { width: 100%; box-shadow: none; border: none; }
+        .cl-card { box-shadow: none; padding: 0; width: 100%; }
+        
+        /* СКРЫВАЕМ ТОЛЬКО CAPTCHA И БЕЙДЖ "Secured by Clerk" */
+        .cl-footer,
+        #clerk-captcha,
+        .cl-poweredBy,
+        a[href*="clerk.com"], 
+        a[href*="clerk.dev"] {
+            display: none !important;
         }
 
         /* --- RESPONSIVE --- */
@@ -476,7 +461,6 @@
                 <span class="header-tagline">FLS Logic Harvester</span>
             </div>
             <div class="header-actions">
-                <div id="user-button"></div>
             </div>
         </div>
     </header>
@@ -572,7 +556,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>See What You'll Get</h2>
-                <p>Sample deliverables from a real legacy Delphi codebase</p>
+                <p>Sample deliverables from a real legacy .NET codebase</p>
             </div>
 
             <div class="strategy-grid">
@@ -580,14 +564,14 @@
                     <h3>Executive Summary</h3>
                     <span class="strategy-tagline">Complete functional overview: traffic analysis, business rules, integrations</span>
                     <p style="margin-bottom: 20px;">A high-level map of every module, data flow and integration point — exactly what stakeholders need to make informed modernisation decisions.</p>
-                    <a href="reports/process-logic-extract.pdf" target="_blank" class="btn-primary" style="padding: 12px 24px; font-size: 0.95rem;" data-testid="example-pdf-link">View PDF</a>
+                    <a href="reports/executive-summary.pdf" target="_blank" class="btn-primary" style="padding: 12px 24px; font-size: 0.95rem;" data-testid="example-pdf-link">View PDF</a>
                 </div>
 
                 <div class="strategy-card" data-testid="example-card">
                     <h3>Process Logic Extract</h3>
                     <span class="strategy-tagline">Detailed spec of the most-used module: 11 business rules, approval pipeline</span>
                     <p style="margin-bottom: 20px;">A granular breakdown of one key module — validation rules, calculation logic, workflow states — ready to hand to your development team.</p>
-                    <a href="reports/timesheet-spec.pdf" target="_blank" class="btn-primary" style="padding: 12px 24px; font-size: 0.95rem;" data-testid="example-pdf-link">View PDF</a>
+                    <a href="reports/process-logic-extract.pdf" target="_blank" class="btn-primary" style="padding: 12px 24px; font-size: 0.95rem;" data-testid="example-pdf-link">View PDF</a>
                 </div>
             </div>
         </div>
@@ -597,61 +581,75 @@
         <div class="container">
             <div class="section-title">
                 <h2>Get Your Free Assessment</h2>
-                <p>Follow these 2 steps to start the harvest</p>
+                <p>Describe your system and get results in hours</p>
             </div>
 
-            <div class="step-container">
-                
-                <div id="step-1" class="step-block active">
-                    <div class="step-header">
-                        <div class="step-number" id="step-1-num">1</div>
-                        <div class="step-title">Authorize via LinkedIn</div>
-                    </div>
-                    <div class="step-content">
-                        <p style="margin-bottom: 20px;">We need to verify your identity before accepting sensitive source code.</p>
-                        <div id="sign-in-container" class="auth-container"></div>
-                        <div id="auth-success-msg" class="hidden" style="color: var(--success-green); font-weight: 600;">
-                            &check; You are successfully logged in.
+            <div class="email-container">
+                <form
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSeW9HKokz3GM5rjzprgmWGAcGvZ2Vfug9Jpbn4V8_AgXpDYqQ/formResponse"
+                    method="POST"
+                    target="hidden_iframe"
+                    onsubmit="submitted=true;"
+                >
+                    <input type="hidden" name="entry.850715313" id="input-name">
+                    <input type="hidden" name="entry.691721438" id="input-email">
+                    <input type="hidden" name="entry.1089865490" id="input-cc" value="False">
+
+                    <div class="email-row" id="row-from">
+                        <span class="email-label">From:</span>
+                        <div class="email-content">
+                            <div id="from-logged-out">
+                                <div id="sign-in-container"></div>
+                            </div>
+                            <div id="from-logged-in" class="hidden">
+                                <div class="user-pill">
+                                    <img id="user-photo" src="" alt="">
+                                    <span id="user-name"></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div id="step-2" class="step-block disabled">
-                    <div class="step-header">
-                        <div class="step-number">2</div>
-                        <div class="step-title">Describe Your System</div>
+                    <div class="email-row disabled-overlay" id="row-to">
+                        <span class="email-label">To:</span>
+                        <div class="email-content">
+                            <strong>FLS Logic Harvester</strong>
+                        </div>
                     </div>
-                    <div class="step-content">
-                        <form
-                            action="https://docs.google.com/forms/d/e/1FAIpQLSeW9HKokz3GM5rjzprgmWGAcGvZ2Vfug9Jpbn4V8_AgXpDYqQ/formResponse"
-                            method="POST"
-                            target="hidden_iframe"
-                            onsubmit="submitted=true;"
-                        >
-                            <input type="hidden" name="entry.850715313" id="input-name">
-                            <input type="hidden" name="entry.691721438" id="input-email">
 
-                            <div class="form-group">
-                                <textarea name="entry.1053593160" style="min-height: 240px;" placeholder="E.g., 'This is a Delphi 7 order processing module. We suspect the tax logic is hardcoded...'"></textarea>
-                            </div>
-
-                            <p style="margin-bottom: 20px;">
-                                <a href="https://www.dropbox.com/request/C1tPo8IoxzznIP5qlzJ9" target="_blank" data-testid="attach-source-code" style="color: var(--text-light); font-size: 0.95rem; text-decoration: none;">&#x1F4CE; Attach Source Code</a>
-                            </p>
-
-                            <div class="consultation-opt-in" data-testid="consultation-checkbox">
-                                <input type="checkbox" id="consultation-opt-in" name="entry.consultation" value="Yes">
-                                <label for="consultation-opt-in">
-                                    I require human-assisted engineering consultation
-                                    <small>(This disables the 2-hour auto-deletion policy)</small>
-                                </label>
-                            </div>
-
-                            <button type="submit" class="btn-primary" style="width: 100%;">Submit Request</button>
-                        </form>
+                    <div class="email-row disabled-overlay" id="row-cc">
+                        <span class="email-label">Cc:</span>
+                        <div class="email-content">
+                            <label class="cc-checkbox-label">
+                                <input type="checkbox" id="cc-toggle" name="entry.consultation" value="Yes">
+                                <span>FLS Human Engineer</span>
+                            </label>
+                        </div>
                     </div>
-                </div>
 
+                    <div class="email-row disabled-overlay" id="row-subject">
+                        <span class="email-label">Subject:</span>
+                        <div class="email-content">
+                            <span style="color: var(--text-dark); font-weight: 500;">Get my free summary and process logic extracts</span>
+                        </div>
+                    </div>
+
+                    <div class="email-body-container disabled-overlay">
+                        <textarea name="entry.1053593160" placeholder="E.g., 'This is my order processing module, user manual and correspodning log files...'"></textarea>
+                    </div>
+
+                    <div class="email-footer disabled-overlay">
+                        <div class="footer-left">
+                            <button type="submit" class="btn-primary" style="padding: 12px 32px; border-radius: 6px;">Send</button>
+                            <a href="https://www.dropbox.com/request/C1tPo8IoxzznIP5qlzJ9" target="_blank" class="attach-link">
+                                <span>&#x1F4CE;</span> Attach Source Code
+                            </a>
+                        </div>
+                        <div id="deletion-notice" class="deletion-notice">
+                            Delete all materials in 2 hours after I receive response
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -668,30 +666,46 @@
         window.addEventListener("load", async function () {
             await window.Clerk.load();
 
-            const step1 = document.getElementById('step-1');
-            const step2 = document.getElementById('step-2');
-            const step1Num = document.getElementById('step-1-num');
-            const authMsg = document.getElementById('auth-success-msg');
-            const signInContainer = document.getElementById('sign-in-container');
+            const fromLoggedOut = document.getElementById('from-logged-out');
+            const fromLoggedIn = document.getElementById('from-logged-in');
+            const userPhoto = document.getElementById('user-photo');
+            const userName = document.getElementById('user-name');
+            const ccToggle = document.getElementById('cc-toggle');
+            const deletionNotice = document.getElementById('deletion-notice');
+            
+            // Elements to enable upon login
+            const disableables = [
+                document.getElementById('row-to'),
+                document.getElementById('row-cc'),
+                document.getElementById('row-subject'),
+                document.querySelector('.email-body-container'),
+                document.querySelector('.email-footer')
+            ];
+
+            // Cc Toggle Logic
+            ccToggle.addEventListener('change', () => {
+                const inputCC = document.getElementById('input-cc');
+                if (ccToggle.checked) {
+                    deletionNotice.classList.add('hidden');
+                    inputCC.value = "True";
+                } else {
+                    deletionNotice.classList.remove('hidden');
+                    inputCC.value = "False";
+                }
+            });
 
             if (window.Clerk.user) {
                 // === USER LOGGED IN ===
+                fromLoggedOut.classList.add('hidden');
+                fromLoggedIn.classList.remove('hidden');
+                
+                userPhoto.src = window.Clerk.user.imageUrl;
+                userName.innerText = window.Clerk.user.fullName || window.Clerk.user.primaryEmailAddress.emailAddress;
 
-                // 1. Mark Step 1 as Done
-                step1Num.classList.add('done');
-                step1Num.innerHTML = "&check;";
-                signInContainer.classList.add('hidden');
-                authMsg.classList.remove('hidden');
+                // Enable the form
+                disableables.forEach(el => el.classList.remove('disabled-overlay'));
 
-                // 2. Enable Step 2
-                step2.classList.remove('disabled');
-                step2.classList.add('active');
-
-                // 3. Mount User Button in Header
-                const userButtonDiv = document.getElementById('user-button');
-                window.Clerk.mountUserButton(userButtonDiv);
-
-                // 4. Autofill Form
+                // Autofill Form
                 if(window.Clerk.user.fullName) {
                     document.getElementById('input-name').value = window.Clerk.user.fullName;
                 }
@@ -701,20 +715,16 @@
 
             } else {
                 // === GUEST ===
-
-                // Ensure step 2 is disabled
-                step2.classList.add('disabled');
-
-                // Mount Sign In form in Step 1
-                window.Clerk.mountSignIn(signInContainer, {
-                    afterSignInUrl: window.location.href,
+                window.Clerk.mountSignIn(document.getElementById('sign-in-container'), {
+                    afterSignInUrl: window.location.href, 
                     afterSignUpUrl: window.location.href,
                     appearance: {
                         elements: {
-                            footer: "hidden",
-                            card: "shadow-none border-none",
-                            headerTitle: "hidden",
-                            headerSubtitle: "hidden"
+                            header: "hidden", 
+                            footer: "hidden", // Убивает нижнюю часть
+                            form: "hidden",   // Убивает поля email/пароля
+                            dividerRow: "hidden", // Убивает полоску "or"
+                            card: "shadow-none border-none bg-transparent"
                         }
                     }
                 });
